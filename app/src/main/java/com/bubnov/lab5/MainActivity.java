@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     public static int NOTIFICATION_ID = 101;
     public static String CHANNEL_ID = "channelID";
     ListView listView;
+    Button buttonSearch;
     Button buttonView;
     Button buttonAdd;
     Button buttonUpdate;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        buttonSearch = findViewById(R.id.buttonSearch);
         buttonView = findViewById(R.id.buttonView);
         buttonAdd = findViewById(R.id.buttonAdd);
         buttonUpdate = findViewById(R.id.buttonUpdate);
@@ -42,7 +44,17 @@ public class MainActivity extends AppCompatActivity {
 
         context = this;
 
-        buttonView.setOnClickListener(new View.OnClickListener() {
+        buttonSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(getSupportFragmentManager().findFragmentById(R.id.fragment_container_view) != null)
+                    getSupportFragmentManager().beginTransaction()
+                            .remove(getSupportFragmentManager().findFragmentById(R.id.fragment_container_view)).commit();
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.fragment_container_view, SearchFragment.class, null)
+                        .commit();
+            }
+        });buttonView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(getSupportFragmentManager().findFragmentById(R.id.fragment_container_view) != null)

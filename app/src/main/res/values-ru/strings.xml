@@ -26,4 +26,6 @@
     <string name="invalid_update_uri">Недействительный обновление Uri</string>
     <string name="invalid_delete_uri">Недействительный удаление Uri</string>
     <string name="id">ID</string>
+
+    <string name="buttonSearch">Поиск</string>
 </resources>

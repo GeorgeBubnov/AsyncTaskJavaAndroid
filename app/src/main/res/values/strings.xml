@@ -26,4 +26,7 @@
     <string name="invalid_update_uri">Invalid update Uri</string>
     <string name="invalid_delete_uri">Invalid delete Uri</string>
     <string name="id">ID</string>
+
+    <string name="buttonSearch">Searche</string>
+    <string name="string">String</string>
 </resources>

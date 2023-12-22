@@ -10,6 +10,15 @@
         android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/buttonSearch"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/first"
+            android:text="@string/buttonSearch" />
+
         <Button
             android:id="@+id/buttonView"
             android:layout_width="match_parent"
